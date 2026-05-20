@@ -1,0 +1,5 @@
+# Hasła i konfiguracja lokalna
+.env
+__pycache__/
+*.pyc
+.post_cache.json

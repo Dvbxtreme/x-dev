@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.dvbxtreme.com.pl/</loc>
+    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://www.dvbxtreme.com.pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dvbxtreme.com.pl/"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dvbxtreme.com.pl/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://www.dvbxtreme.com.pl/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dvbxtreme.com.pl/blog.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dvbxtreme.com.pl/kariera.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://www.dvbxtreme.com.pl/kariera.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dvbxtreme.com.pl/kariera.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dvbxtreme.com.pl/polityka-prywatnosci.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://www.dvbxtreme.com.pl/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dvbxtreme.com.pl/polityka-prywatnosci.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dvbxtreme.com.pl/regulamin.html</loc>
+    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://www.dvbxtreme.com.pl/regulamin.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dvbxtreme.com.pl/regulamin.html"/>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

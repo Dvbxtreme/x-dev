@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - X-DEV | Nowinki Technologiczne, Porady Programistyczne i Case Studies</title>
+<meta name="description" content="Blog X-DEV - nowinki technologiczne, porady programistyczne, case studies i wszystko o tworzeniu stron i aplikacji webowych. React, Vue, SEO, AI i więcej.">
+<meta name="keywords" content="blog programistyczny, porady web development, case studies, react, vue, seo, ai, x-dev, programowanie, tworzenie stron">
+<meta name="author" content="X-DEV / Dvbxtreme Sp. z o.o.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.dvbxtreme.com.pl/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog X-DEV – Nowinki Technologiczne i Porady Programistyczne">
+<meta property="og:description" content="Nowinki technologiczne, porady programistyczne, case studies i wszystko o tworzeniu stron i aplikacji webowych.">
+<meta property="og:url" content="https://www.dvbxtreme.com.pl/blog.html">
+<meta property="og:site_name" content="X-DEV">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:image" content="https://www.dvbxtreme.com.pl/og-image.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog X-DEV – Technologie i Programowanie">
+<meta name="twitter:description" content="Nowinki technologiczne, porady i case studies prosto od naszego zespołu.">
+<meta name="twitter:image" content="https://www.dvbxtreme.com.pl/og-image.jpg">
+
+<link rel="alternate" href="https://www.dvbxtreme.com.pl/blog.html" hreflang="pl-PL">
+<link rel="alternate" href="https://www.dvbxtreme.com.pl/blog.html" hreflang="x-default">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://www.dvbxtreme.com.pl/blog.html#blog",
+      "url": "https://www.dvbxtreme.com.pl/blog.html",
+      "name": "Blog X-DEV",
+      "description": "Nowinki technologiczne, porady programistyczne, case studies i wszystko o tworzeniu stron i aplikacji.",
+      "publisher": { "@type": "Organization", "name": "X-DEV", "url": "https://www.dvbxtreme.com.pl/" },
+      "inLanguage": "pl-PL"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dvbxtreme.com.pl/blog.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://www.dvbxtreme.com.pl/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.dvbxtreme.com.pl/blog.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) - odkomentuj i wstaw swoje ID
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0a0f" id="themeColorMeta">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="msapplication-TileColor" content="#0a0a0f">
+<meta name="msapplication-TileImage" content="icons/icon-192.png">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg class="logo-svg" viewBox="0 0 230 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6c5ce7"/>
+            <stop offset="50%" stop-color="#00cec9"/>
+            <stop offset="100%" stop-color="#fd79a8"/>
+          </linearGradient>
+          <linearGradient id="logoGrad2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#6c5ce7"/>
+            <stop offset="100%" stop-color="#00cec9"/>
+          </linearGradient>
+          <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#6c5ce7" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#6c5ce7" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="30" cy="30" r="27" fill="url(#glowGrad)" class="logo-glow"/>
+        <circle cx="30" cy="30" r="24" stroke="url(#logoGrad)" stroke-width="2.5" fill="rgba(108,92,231,0.06)" class="logo-ring"/>
+        <circle cx="30" cy="30" r="17" stroke="url(#logoGrad2)" stroke-width="2" stroke-dasharray="26 40" fill="none" class="logo-ring-inner" opacity="0.5"/>
+        <text x="20" y="37" font-family="'JetBrains Mono',monospace" font-weight="700" font-size="22" fill="url(#logoGrad2)" class="logo-prompt">&gt;</text>
+        <text x="38" y="37" font-family="'JetBrains Mono',monospace" font-weight="700" font-size="22" fill="#e8e8f0" class="logo-underscore">_</text>
+        <circle cx="4" cy="30" r="2.5" fill="#00cec9" class="logo-dot logo-dot1"/>
+        <circle cx="56" cy="30" r="2.5" fill="#fd79a8" class="logo-dot logo-dot2"/>
+        <text x="68" y="30" font-family="'Inter',sans-serif" font-weight="800" font-size="24" fill="#e8e8f0" class="logo-text">X - DEV</text>
+        <text x="68" y="50" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#8888a0" class="logo-sub">Dvbxtreme Sp. z o.o.</text>
+      </svg>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="index.html#services">Usługi</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#about">O nas</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="pl">PL</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-header">
+  <div class="container">
+    <span class="section-tag"><i class="fas fa-blog"></i> Blog</span>
+    <h1 data-i18n="blog.title">Blog X-DEV</h1>
+    <p data-i18n="blog.desc">Nowinki technologiczne, porady i case studies prosto od naszego zespolu.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="blog-controls reveal">
+    <input type="text" id="blogSearch" placeholder="Szukaj w blogu...">
+    <select id="blogCategory">
+      <option value="all" data-i18n="blog.all">Wszystkie kategorie</option>
+      <option value="tech" data-i18n="blog.cat_tech">Technologie</option>
+      <option value="webdev" data-i18n="blog.cat_webdev">Web Development</option>
+      <option value="ai" data-i18n="blog.cat_ai">AI</option>
+      <option value="business" data-i18n="blog.cat_business">Biznes</option>
+    </select>
+  </div>
+  <div class="blog-grid" id="blogGrid"></div>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<div class="modal-overlay" id="postModal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+    <div class="modal-body blog-modal-body" id="postModalBody"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> <span data-i18n="footer.copy">X-DEV / Dvbxtreme Sp. z o.o. Wszelkie prawa zastrzezone.</span></p>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer.home">Strona glowna</a>
+        <a href="polityka-prywatnosci.html" data-i18n="footer.pp">Polityka prywatnosci</a>
+        <a href="regulamin.html" data-i18n="footer.tos">Regulamin</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const posts = [
+  {
+    title: 'Jak zacząć z Rust? Poradnik dla web developerów',
+    date: '2026-05-21',
+    category: 'tech',
+    excerpt: 'Rust zdobywa popularność w web. Sprawdź dlaczego warto nauczyć się tego języka w 2026.',
+    content: 'Rust daje wydajność C++ z bezpieczeństwem pamięciowym. W web: WASM (kompilacja do WebAssembly), Tauri (desktop apps), Axum (backend), Turbopack (bundler). Krzywa uczenia stroma, ale warto. W X-DEV używamy Rusta do WASM modułów i narzędzi CLI.',
+    color: '#000000,#333333',
+    icon: 'fas fa-cog'
+  },
+  {
+    title: 'ESLint 10 – nowa konfiguracja i flat config',
+    date: '2026-05-21',
+    category: 'tech',
+    excerpt: 'ESLint 10 z flat config jako domyślnym. Jak migrować i korzystać z nowych funkcji?',
+    content: 'ESLint 10 kończy erę .eslintrc.* – flat config (eslint.config.js) jest teraz domyślny. Szybsze lintowanie dzięki cache\'owaniu. Nowe rules: @stylistic (formatowanie), security (bezpieczeństwo). Lepsza integracja z TypeScript. W X-DEV ESLint to standard quality gate w każdym projekcie.',
+    color: '#4b32c3,#7c6ad9',
+    icon: 'fas fa-lint'
+  },
+  {
+    title: 'Cyberbezpieczeństwo dla małych firm – praktyczny poradnik',
+    date: '2026-05-20',
+    category: 'business',
+    excerpt: 'Małe firmy są najczęstszym celem ataków. Podstawowe zabezpieczenia które musisz wdrożyć.',
+    content: 'Podstawy cyberbezpieczeństwa dla małych firm: 1. Silne hasła + 2FA/MFA, 2. Regularne backup (3-2-1), 3. Aktualizacje oprogramowania, 4. Szyfrowanie danych, 5. VPN dla zdalnego dostępu. Koszt: od 0 (dobre praktyki) do 500 zł/mc (profesjonalne narzędzia). W X-DEV audyt bezpieczeństwa to pierwszy krok dla każdego klienta.',
+    color: '#d63031,#e17055',
+    icon: 'fas fa-shield-alt'
+  },
+  {
+    title: 'Astro – framework do contentowych stron',
+    date: '2026-05-20',
+    category: 'webdev',
+    excerpt: 'Astro łączy najlepsze z React, Vue, Svelte w jednym frameworku. Idealny dla blogów i stron firmowych.',
+    content: 'Astro to framework do budowy szybkich stron contentowych. Island architecture – wyspy interaktywności w morzu statycznego HTML. Zero JS domyślnie, tylko to co potrzebne. Obsługa wielu frameworków (React, Vue, Svelte, Lit). Content Collections dla blogów. W X-DEV rozważamy Astro dla klientów którzy potrzebują głównie treści.',
+    color: '#ff5a1f,#bc3a00',
+    icon: 'fas fa-star'
+  },
+  {
+    title: 'TypeScript 5.8 – co nowego w najnowszej wersji?',
+    date: '2026-05-25',
+    category: 'tech',
+    excerpt: 'Nowości w TypeScript 5.8: lepsza inferencja, szybsza kompilacja i nowe funkcje typów. Co musisz wiedzieć jako developer.',
+    content: 'TypeScript 5.8 przynosi wiele usprawnień. Kluczowe zmiany to ulepszona inferencja typów w złożonych generykach, szybsza kompilacja dzięki optymalizacjom pamięci oraz nowe modyfikatory dostępu. Deweloperzy korzystający z React docenią lepsze wsparcie dla Server Components. Aktualizacja jest w pełni kompatybilna wstecz. W X-DEV używamy TypeScripta we wszystkich projektach frontendowych – od małych landing page po zaawansowane dashboardy.',
+    color: 'linear-gradient(135deg,#3178c6,#235a97)',
+    icon: 'fab fa-js'
+  },
+  {
+    title: 'Jak zwiększyć konwersję w sklepie internetowym? 7 sprawdzonych trików',
+    date: '2026-05-25',
+    category: 'business',
+    excerpt: '7 sprawdzonych metod na zwiększenie konwersji w e-commerce. Od optymalizacji koszyka po social proof.',
+    content: 'Zwiększenie konwersji w e-commerce to proces ciągły. Oto 7 sprawdzonych trików:\n\n1. Uprość proces zakupu – im mniej kliknięć, tym lepiej\n2. Dodaj social proof – opinie, oceny, liczba sprzedanych sztuk\n3. Optymalizuj strony produktów – dobre zdjęcia, opisy, CTA\n4. Darmowa dostawa – to najskuteczniejszy trik\n5. Retargeting – przypomnij o porzuconym koszyku\n6. A/B testuj wszystko – od koloru buttona po cenę\n7. Mobile first – 70% zakupów odbywa się na telefonie\n\nW X-DEV projektujemy sklepy z myślą o konwersji od pierwszego pixela.',
+    color: 'linear-gradient(135deg,#e17055,#d63031)',
+    icon: 'fas fa-chart-line'
+  },
+  {
+    title: 'Next.js 16 – przewodnik po nowych funkcjach',
+    date: '2026-05-24',
+    category: 'webdev',
+    excerpt: 'Next.js 16 już dostępny! Sprawdź nowości: Partial Prerendering, lepsze caching i nowy kompilator.',
+    content: 'Next.js 16 to przełomowa wersja. Najważniejsze nowości:\n\nPartial Prerendering (PPR) – łączy SSR i SSG w jednym komponencie. Lepszy cache – automatyczne cache\'owanie fetch z optymalistyczną rewalidacją. Nowy kompilator oparty na Rust – nawet 5x szybszy niż poprzednik. Lepsze metadata API i ulepszony App Router.\n\nW X-DEV Next.js to nasz główny framework do budowy stron i aplikacji – stawiamy na to, co sprawdzone i wydajne.',
+    color: 'linear-gradient(135deg,#000000,#333333)',
+    icon: 'fas fa-cubes'
+  },
+  {
+    title: 'Docker Compose w praktyce – poradnik dla początkujących',
+    date: '2026-05-24',
+    category: 'tech',
+    excerpt: 'Jak skonfigurować środowisko deweloperskie z Docker Compose. Krok po kroku od zera do działającego stacka.',
+    content: 'Docker Compose to narzędzie do definiowania i uruchamiania wielokontenerowych aplikacji Docker. Z jednym plikiem YAML możesz uruchomić frontend, backend, bazę danych i redis jednym poleceniem.\n\nPrzykładowy stack: React (frontend) + Node.js (backend) + PostgreSQL (baza) + Redis (cache) + Nginx (reverse proxy). Każda usługa w osobnym kontenerze, ale wszystkie w jednej sieci.\n\nW X-DEV używamy Docker Compose codziennie – to standard w każdym projekcie.',
+    color: 'linear-gradient(135deg,#2496ed,#1d7fc1)',
+    icon: 'fab fa-docker'
+  },
+  {
+    title: 'Jak pisać czysty kod? Zasady SOLID w praktyce',
+    date: '2026-05-23',
+    category: 'tech',
+    excerpt: 'Zasady SOLID to fundament dobrego kodu. Zobacz jak stosować je w praktyce na przykładach z React i Node.js.',
+    content: 'SOLID to pięć zasad programowania obiektowego: Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.\n\nW praktyce: jedna funkcja = jedna odpowiedzialność. Komponenty React powinny być małe i robić jedną rzecz. Serwisy w backendzie – wydzielone interfejsy. Testowanie staje się prostsze, kod łatwiejszy w utrzymaniu.\n\nW X-DEV code review sprawdza zgodność z SOLID w każdym pull requeście.',
+    color: 'linear-gradient(135deg,#6c5ce7,#a29bfe)',
+    icon: 'fas fa-code'
+  },
+  {
+    title: 'Performance budget – jak kontrolować wydajność strony?',
+    date: '2026-05-23',
+    category: 'webdev',
+    excerpt: 'Ustal budżet wydajnościowy dla swojej strony i kontroluj go automatycznie. Narzędzia, metryki i praktyki.',
+    content: 'Performance budget to limit, którego nie może przekroczyć twoja strona. Przykład: max 2s czasu ładowania, max 500kB JS, max 1MB obrazów. Przekroczenie = blokada deployu.\n\nNarzędzia: Lighthouse CI, WebPageTest, BundlePhobia. Metryki: LCP (2.5s), INP (200ms), CLS (0.1), TBT (300ms). Do tego wielkość bundle\'u JS i CSS.\n\nW X-DEV każdy projekt ma performance budget od pierwszego commitu.',
+    color: 'linear-gradient(135deg,#00b894,#55efc4)',
+    icon: 'fas fa-tachometer-alt'
+  },
+  {
+    title: 'GraphQL vs REST – który wybrać do swojego projektu?',
+    date: '2026-05-22',
+    category: 'tech',
+    excerpt: 'Porównanie GraphQL i REST. Zalety, wady i typowe przypadki użycia każdego z podejść.',
+    content: 'REST to standard od lat – prosty, cache\'owalny, dobrze znany. GraphQL daje elastyczność – klient decyduje jakie dane pobierać.\n\nGraphQL sprawdza się przy złożonych, powiązanych danych – dashboardy, aplikacje z wieloma widokami. REST jest lepszy dla prostych CRUD, publicznych API i gdy cache ma kluczowe znaczenie.\n\nW X-DEV używamy obu – REST dla prostych API, GraphQL dla złożonych modułów.',
+    color: 'linear-gradient(135deg,#e535ab,#b12d8a)',
+    icon: 'fas fa-project-diagram'
+  },
+  {
+    title: 'Jak zabezpieczyć API przed atakami?',
+    date: '2026-05-22',
+    category: 'tech',
+    excerpt: 'Najlepsze praktyki bezpieczeństwa API: autoryzacja, rate limiting, walidacja, szyfrowanie i monitoring.',
+    content: 'Bezpieczne API to podstawa każdej aplikacji webowej. Kluczowe zabezpieczenia:\n\n1. Autoryzacja – JWT z krótkim TTL, refresh tokeny\n2. Rate limiting – ogranicz liczbę requestów na użytkownika\n3. Input validation – zawsze po stronie serwera\n4. HTTPS – TLS 1.3, HSTS\n5. CORS – whitelista dozwolonych domen\n6. Monitoring – logowanie, alerty, audit trail\n\nW X-DEV bezpieczeństwo API to standard, nie opcja.',
+    color: 'linear-gradient(135deg,#d63031,#e17055)',
+    icon: 'fas fa-shield-alt'
+  },
+  {
+    title: 'Tailwind CSS vs styled-components – co wybrać?',
+    date: '2026-05-21',
+    category: 'webdev',
+    excerpt: 'Porównanie dwóch podejść do stylowania w React. Utility-first vs CSS-in-JS. Które lepsze dla Twojego projektu?',
+    content: 'Tailwind CSS to utility-first framework – piszesz klasy w HTML, nie musisz tworzyć osobnych plików CSS. Szybki prototyp, mały bundle po purgu, świetna dokumentacja.\n\nstyled-components to CSS-in-JS – dynamiczne style, łatwe theme\'owanie, brak konfliktów nazw. Idealne dla złożonych komponentów z dynamicznymi stylami.\n\nW X-DEV używamy Tailwinda w projektach marketingowych i landing page\'ach, styled-components w dashboardach i aplikacjach.',
+    color: 'linear-gradient(135deg,#06b6d4,#0891b2)',
+    icon: 'fab fa-css3-alt'
+  },
+  {
+    title: 'Systemy kolejkowe w architekturze mikroserwisów',
+    date: '2026-05-21',
+    category: 'tech',
+    excerpt: 'RabbitMQ, Kafka, Redis Queue – jak wybrać odpowiedni system kolejek do komunikacji między serwisami?',
+    content: 'Systemy kolejkowe (message brokers) pozwalają na asynchroniczną komunikację między mikroserwisami. To kluczowy element skalowalnej architektury.\n\nRabbitMQ – dobry wybór dla standardowych zadań, wspiera wiele protokołów. Kafka – event stream, idealny do logów, analityki, big data. Redis Queue – prosty, lekki, dla małych projektów.\n\nW X-DEV projektujemy architektury z kolejkami tam, gdzie jest to potrzebne – decoupling serwisów, async processing, retry.',
+    color: 'linear-gradient(135deg,#e34f26,#c43a1e)',
+    icon: 'fas fa-server'
+  },
+  {
+    title: 'WebAssembly – przyszłość web developmentu?',
+    date: '2026-05-20',
+    category: 'tech',
+    excerpt: 'WebAssembly (Wasm) zmienia web development. Sprawdź, jakie możliwości daje i kiedy warto go użyć.',
+    content: 'WebAssembly pozwala uruchamiać kod napisany w C, C++, Rust czy Go w przeglądarce z wydajnością zbliżoną do natywnej. Wykorzystanie: gry, edytory wideo, przetwarzanie danych, kompresja.\n\nWasm jest już wspierany we wszystkich głównych przeglądarkach. W połączeniu z JavaScript tworzy nową jakość – JS do interakcji, Wasm do ciężkich obliczeń.\n\nW X-DEV śledzimy rozwój Wasma i implementujemy go tam, gdzie daje realną przewagę wydajnościową.',
+    color: 'linear-gradient(135deg,#654ff0,#5438dc)',
+    icon: 'fas fa-microchip'
+  },
+  {
+    title: 'Jak optymalizować zapytania SQL? Poradnik dla developerów',
+    date: '2026-05-20',
+    category: 'tech',
+    excerpt: 'Wolne zapytania SQL to najczęstsza przyczyna problemów z wydajnością. Poznaj techniki optymalizacji.',
+    content: 'Najskuteczniejsze techniki optymalizacji SQL:\n\n1. Indeksy – kluczowe dla szybkiego wyszukiwania\n2. EXPLAIN ANALYZE – zrozum jak działa zapytanie\n3. Unikaj SELECT * – pobieraj tylko potrzebne kolumny\n4. JOIN zamiast podzapytań – często szybsze\n5. Paginacja z cursor zamiast OFFSET\n6. Partycjonowanie tabel dla dużych zbiorów\n\nW X-DEV optymalizacja baz danych to standardowy krok przed deployem produkcyjnym.',
+    color: 'linear-gradient(135deg,#336791,#2b5d84)',
+    icon: 'fas fa-database'
+  },
+  {
+    title: 'AI w web developmentzie – narzędzia, które warto znać',
+    date: '2026-05-19',
+    category: 'ai',
+    excerpt: 'Jak AI zmienia pracę programisty? Przegląd narzędzi: GitHub Copilot, Cursor, Claude, ChatGPT i inne.',
+    content: 'Sztuczna inteligencja rewolucjonizuje web development. GitHub Copilot pisze kod za Ciebie, Cursor to IDE z AI, Claude i ChatGPT pomagają w debugowaniu i refactoringu.\n\nStatystyki: programiści używający AI są o 55% bardziej produktywni. Ale AI nie zastąpi developera – wymaga review i zrozumienia kontekstu.\n\nW X-DEV używamy AI jako asystenta – przyspiesza pisanie kodu, testów i dokumentacji, ale każda linia jest sprawdzana przez człowieka.',
+    color: 'linear-gradient(135deg,#00cec9,#00b894)',
+    icon: 'fas fa-brain'
+  },
+  {
+    title: 'Monitoring produkcji – jak nie dać się zaskoczyć?',
+    date: '2026-05-19',
+    category: 'tech',
+    excerpt: 'Sentry, Datadog, New Relic – jak skonfigurować monitoring aplikacji webowej, aby łapać błędy zanim zobaczą je klienci.',
+    content: 'Monitoring produkcji to must-have dla każdej aplikacji. Kluczowe obszary:\n\n1. Error tracking – Sentry, Bugsnag: łap wyjątki w czasie rzeczywistym\n2. APM – Datadog, New Relic: śledź wydajność API i bazy danych\n3. Uptime monitoring – Better Uptime, Pingdom: alerty gdy strona pada\n4. Logs – Grafana Loki, ELK: centralne logowanie\n5. Alerts – PagerDuty, Slack: powiadomienia o krytycznych błędach\n\nW X-DEV każdy projekt ma monitoring od dnia 1 produkcji.',
+    color: 'linear-gradient(135deg,#6c5ce7,#4834d4)',
+    icon: 'fas fa-bell'
+  },
+  {
+    title: 'Micro Frontends – architektura dla dużych zespołów',
+    date: '2026-05-18',
+    category: 'webdev',
+    excerpt: 'Micro Frontends dzielą frontend na niezależne moduły. Sprawdź, jak wdrożyć tę architekturę w praktyce.',
+    content: 'Micro Frontends to odpowiedź na problemy związane z dużymi, monolitycznymi aplikacjami frontendowymi. Każdy zespół ma swoją domenę, swój stack i swoją ścieżkę deployu.\n\nKorzyści: niezależne deploye, skalowanie zespołów, różne technologie w różnych modułach. Wyzwania: integracja, performance, spójność UX.\n\nNarzędzia: Module Federation (Webpack 5), Single SPA, qiankun. W X-DEV stosujemy Micro Frontends w projektach z 5+ zespołami.',
+    color: 'linear-gradient(135deg,#fdcb6e,#f39c12)',
+    icon: 'fas fa-puzzle-piece'
+  },
+  {
+    title: 'Shadcn/ui – nowy standard komponentów w React?',
+    date: '2026-05-18',
+    category: 'webdev',
+    excerpt: 'Shadcn/ui podbija świat Reacta. Zobacz dlaczego wszyscy o nim mówią i jak zacząć go używać.',
+    content: 'Shadcn/ui to nie biblioteka – to kolekcja komponentów które dodajesz bezpośrednio do swojego kodu. Kopiujesz, modyfikujesz, masz pełną kontrolę. Zero zależności, zero narzutu, pełna customizacja.\n\nOpiera się na Tailwind CSS i Radix UI (dostępność). Komponenty: button, card, dialog, dropdown, form, table, toast i wiele więcej.\n\nW X-DEV shadcn/ui to nasz domyślny wybór dla nowych projektów React – szybki development, piękny design i dostępność.',
+    color: 'linear-gradient(135deg,#000000,#2d2d2d)',
+    icon: 'fas fa-palette'
+  },
+  {
+    title: 'T3 Stack – nowoczesny fullstack dla odważnych',
+    date: '2026-05-17',
+    category: 'webdev',
+    excerpt: 'Next.js, tRPC, Prisma, Tailwind, TypeScript – poznaj T3 Stack, który łączy najlepsze narzędzia w jeden framework.',
+    content: 'T3 Stack to zestaw narzędzi stworzony przez Theo z t3.gg: Next.js (framework), tRPC (API bez RESTa), Prisma (ORM), Tailwind (CSS), TypeScript (typowanie).\n\nZalety: pełne typowanie od bazy danych po UI, brak boilerplate API, szybki development. Idealny dla fullstackowych aplikacji.\n\nW X-DEV T3 Stack używamy w projektach gdzie liczy się szybkość i full type safety.',
+    color: 'linear-gradient(135deg,#a29bfe,#6c5ce7)',
+    icon: 'fas fa-layer-group'
+  },
+  {
+    title: 'Playwright vs Cypress – testy E2E w 2026',
+    date: '2026-05-17',
+    category: 'tech',
+    excerpt: 'Porównanie dwóch najlepszych narzędzi do testów end-to-end. Playwright czy Cypress – co wybrać?',
+    content: 'Playwright od Microsoft i Cypress to dwa najpopularniejsze narzędzia do testów E2E.\n\nPlaywright: wsparcie dla Chromium, Firefox, WebKit. API w JS/TS/Python/C#. Network interception, mobile emulation, automatyczne oczekiwania. Szybki, stabilny.\n\nCypress: świetny DX, time travel debugging, interaktywne testy. Ograniczony do Chromium, ale z lepszym doświadczeniem dla początkujących.\n\nW X-DEV standardem są testy E2E z Playwright – szersze wsparcie przeglądarek i lepsza wydajność w CI.',
+    color: 'linear-gradient(135deg,#45ba4b,#3da242)',
+    icon: 'fas fa-vial'
+  },
+  {
+    title: 'State management w 2026 – czy nadal potrzebujemy Reduxa?',
+    date: '2026-05-16',
+    category: 'webdev',
+    excerpt: 'Redux, Zustand, Jotai, Context API – który state manager wybrać do swojego projektu w 2026 roku?',
+    content: 'Świat state managementu zmienia się szybko. Redux wciąż ma największy ekosystem, ale jest ciężki. Zustand wygryza go w mniejszych projektach – prosty, lekki, TypeScript-friendly. Jotai i Recoil to atomic state – idealne dla złożonych zależności. Context API wystarcza dla prostych przypadków.\n\nOgólna zasada: im prostszy projekt, tym lżejszy state manager. W X-DEV używamy Zustanda w nowych projektach i Redux Toolkit w starszych gdzie jest już rozbudowany store.',
+    color: 'linear-gradient(135deg,#764abc,#5a3895)',
+    icon: 'fas fa-cubes'
+  },
+  {
+    title: 'Progressive Enhancement – stara zasada w nowej odsłonie',
+    date: '2026-05-16',
+    category: 'webdev',
+    excerpt: 'Progressive Enhancement wraca do łask w dobie JavaScript frameworks. Zobacz jak robić to dobrze.',
+    content: 'Progressive Enhancement oznacza, że strona działa bez JavaScript, ale korzysta z niego gdy jest dostępny. To kluczowe dla dostępności, SEO i wydajności.\n\nW praktyce: HTML z treścią → CSS z layoutem → JS z interakcjami. Formularze działają bez JS, linki prowadzą do URLi, obrazki mają alt.\n\nW X-DEV każdą stronę testujemy bez JS – jeśli działa, dopiero wtedy dodajemy framework. To daje solidny fundament.',
+    color: 'linear-gradient(135deg,#00cec9,#55efc4)',
+    icon: 'fas fa-layer-group'
+  },
+  {
+    title: 'Bun vs Node.js – szybszy runtime dla Twojego projektu',
+    date: '2026-05-14',
+    category: 'tech',
+    excerpt: 'Bun to nowy runtime JS, który obiecuje 3x szybsze działanie niż Node.js. Sprawdź, czy warto migrować.',
+    content: 'Bun to runtime napisany w Zig, który jest w pełni kompatybilny z Node.js API. Oferuje wbudowany bundler, transpilator TypeScript, menedżer pakietów (10x szybszy niż npm).\n\nBenchmark: React SSR z Bun jest 3.5x szybszy niż z Node.js. Instalacja zależności – 15x szybsza niż npm. Testy – 2x szybsze.\n\nWady: młodszy ekosystem, mniej bibliotek natywnych. W X-DEV testujemy Bun w nowych projektach, ale Node.js wciąż jest naszym głównym runtime dla stabilnych systemów.',
+    color: 'linear-gradient(135deg,#fbf0df,#d4a373)',
+    icon: 'fas fa-bolt'
+  },
+  {
+    title: 'REST API best practices – jak zaprojektować dobre API?',
+    date: '2026-05-14',
+    category: 'tech',
+    excerpt: 'Zasady projektowania REST API: nazewnictwo, paginacja, wersjonowanie, błędy i dokumentacja.',
+    content: 'Rest API to wciąż najpopularniejszy sposób komunikacji między frontendem a backendem. Kluczowe zasady:\n\n1. Używaj rzeczowników w URLach (/users, /orders) nie czasowników\n2. HTTP metody: GET, POST, PUT, PATCH, DELETE\n3. Paginacja: cursor-based z limitem\n4. Wersjonowanie: /v1/users przez cały czas\n5. Konsystentne błędy – zawsze ten sam format { error, message, code }\n6. Dokumentacja – OpenAPI/Swagger to must-have\n\nW X-DEV każde API projektujemy zgodnie z tymi zasadami dla spójności i łatwości utrzymania.',
+    color: 'linear-gradient(135deg,#336791,#2b5d84)',
+    icon: 'fas fa-plug'
+  },
+  {
+    title: 'WebSockets – real-time w aplikacjach webowych',
+    date: '2026-05-12',
+    category: 'tech',
+    excerpt: 'Jak zaimplementować komunikację w czasie rzeczywistym? WebSocket, Server-Sent Events i WebRTC.',
+    content: 'Real-time communication w web to już standard. WebSocket – dwukierunkowa komunikacja, idealna dla czatów i notyfikacji. Server-Sent Events – prostsze, jednokierunkowe (serwer → klient), dobre dla feedów i aktualizacji. WebRTC – peer-to-peer audio/wideo, dla rozmów i konferencji.\n\nWybór zależy od przypadku: czat → WebSocket, notyfikacje → SSE, wideorozmowa → WebRTC.\n\nXbot AI naszej agencji używa WebSocketów do komunikacji w czasie rzeczywistym.',
+    color: 'linear-gradient(135deg,#0984e3,#74b9ff)',
+    icon: 'fas fa-wifi'
+  },
+  {
+    title: 'Kompresja obrazów w web – przewodnik po formatach',
+    date: '2026-05-12',
+    category: 'webdev',
+    excerpt: 'WebP, AVIF, JPEG XL – który format wybrać do swojej strony? Porównanie kompresji, jakości i wsparcia.',
+    content: 'Obrazy stanowią średnio 50% wagi strony. Wybór odpowiedniego formatu ma ogromny wpływ na wydajność.\n\nWebP – małe rozmiary, pełne wsparcie przeglądarek, strata/bezstratna. AVIF – lepsza kompresja niż WebP, ale słabsze wsparcie starszych przeglądarek. JPEG XL – przyszłość, ale jeszcze nie wszędzie dostępny. SVG – dla ikon i grafik wektorowych.\n\nW X-DEV standardem jest WebP z fallbackiem na PNG/JPEG dzięki tagowi <picture>.',
+    color: 'linear-gradient(135deg,#e17055,#d35400)',
+    icon: 'fas fa-image'
+  },
+  {
+    title: 'Edge Computing – aplikacje bliżej użytkownika',
+    date: '2026-05-10',
+    category: 'tech',
+    excerpt: 'Cloudflare Workers, Vercel Edge, AWS Lambda@Edge – jak edge computing zmienia architekturę webowych aplikacji.',
+    content: 'Edge computing przenosi logikę aplikacji na brzeg sieci – bliżej użytkownika. Czas odpowiedzi spada z 200ms do 20ms.\n\nCloudflare Workers – JS na edge\'u, niesamowita szybkość, miliony requestów na sekundę. Vercel Edge – idealne dla Next.js Edge Functions. AWS Lambda@Edge – integracja z CloudFront.\n\nZastosowania: personalizacja treści, A/B testy, autoryzacja, redirecty, geolokalizacja. W X-DEV używamy edge computing dla klientów globalnych.',
+    color: 'linear-gradient(135deg,#00b894,#00cec9)',
+    icon: 'fas fa-cloud'
+  },
+  {
+    title: 'Design Tokens – jak utrzymać spójność UI w skalowanym projekcie?',
+    date: '2026-05-10',
+    category: 'webdev',
+    excerpt: 'Design Tokens to fundament Design Systemu. Dowiedz się jak zarządzać kolorami, typografią i spacingiem w skali.',
+    content: 'Design Tokens to pojedyńcze wartości wizualne (kolor, font-size, spacing, shadow) zapisane jako zmienne. Używane wszędzie – od Figmy po kod.\n\nPrzykład: --color-primary: #6c5ce7; --spacing-md: 16px. W Figmie i Tailwindzie/CSSie te same wartości.\n\nKorzyści: spójność UI, szybkie zmiany globalne, łatwe theme\'owanie (dark mode). W X-DEV każdy projekt z Design Systemem opiera się na tokenach.',
+    color: 'linear-gradient(135deg,#fd79a8,#e84393)',
+    icon: 'fas fa-swatchbook'
+  },
+  {
+    title: 'Content Security Policy – ochrona przed XSS',
+    date: '2026-05-08',
+    category: 'tech',
+    excerpt: 'CSP to potężne narzędzie przeciw atakom XSS. Jak skonfigurować Content Security Policy bez łamania strony.',
+    content: 'Content Security Policy (CSP) to nagłówek HTTP który mówi przeglądarce jakie źródła są dozwolone – skrypty, style, obrazy, fonty.\n\nPrzykład: Content-Security-Policy: default-src \'self\'; script-src \'self\' https://cdn.example.com; img-src *;\n\nWdrożenie: zacznij od report-only (Content-Security-Policy-Report-Only), zbieraj raporty, poprawiaj błędy, dopiero potem włącz egzekucję.\n\nW X-DEV CSP jest standardem bezpieczeństwa dla każdej strony i aplikacji.',
+    color: 'linear-gradient(135deg,#d63031,#b71c1c)',
+    icon: 'fas fa-shield-virus'
+  },
+  {
+    title: 'Figma dla developerów – jak czytać projekty UI',
+    date: '2026-05-08',
+    category: 'webdev',
+    excerpt: 'Poradnik dla programistów: jak nawigować w Figmie, czytać specyfikacje, extractować style i przekładać design na kod.',
+    content: 'Figma to nie tylko narzędzie dla designerów – developer też musi umieć z niej korzystać. Kluczowe umiejętności:\n\n1. Inspect mode – sprawdzaj rozmiary, kolory, fonty\n2. Auto layout – zrozum jak projekt reaguje na różne ekrany\n3. Warianty komponentów – jeden komponent, wiele stanów\n4. Export assetów – SVG, PNG, WebP z odpowiednimi ustawieniami\n5. Prototyp – zrozum flow użytkownika\n\nW X-DEV developerzy i designerzy pracują w jednej Figmie – bez przepisówania wymagań.',
+    color: 'linear-gradient(135deg,#f24e1e,#a259ff)',
+    icon: 'fab fa-figma'
+  },
+  {
+    title: 'Redis – nie tylko cache. 5 praktycznych zastosowań',
+    date: '2026-05-06',
+    category: 'tech',
+    excerpt: 'Redis to więcej niż szybki cache. Queue, session store, rate limiter, pub/sub i real-time leaderboard.',
+    content: 'Redis to in-memory data store, który większość zna tylko jako cache. Ale Redis potrafi więcej:\n\n1. Session store – szybki dostęp do sesji użytkownika\n2. Message queue – BullMQ, Celery na Redisie\n3. Rate limiter – zliczaj requesty na sekundę\n4. Pub/Sub – komunikacja między serwisami\n5. Leaderboard – sorted sets dla rankingów\n\nW X-DEV Redis jest standardem w projektach wymagających szybkości i skalowalności.',
+    color: 'linear-gradient(135deg,#dc382d,#a82c20)',
+    icon: 'fas fa-bolt'
+  },
+  {
+    title: 'Jak pisać dobre commit message? Conventional Commits',
+    date: '2026-05-06',
+    category: 'tech',
+    excerpt: 'Conventional Commits to standard pisania commit message. Dowiedz się jak ułatwić code review i generowanie changeloga.',
+    content: 'Conventional Commits to prosty standard: feat:, fix:, chore:, docs:, refactor:, test:. Przykład: feat(auth): add login with Google.\n\nKorzyści: automatyczne generowanie changeloga, semver (major/minor/patch), łatwiejsze code review.\n\nW X-DEV każdy commit musi spełniać Conventional Commits – to nasze standard quality gate.',
+    color: 'linear-gradient(135deg,#2d3436,#636e72)',
+    icon: 'fab fa-git-alt'
+  },
+  {
+    title: 'Narzędzia AI dla web developerów – przegląd 2026',
+    date: '2026-05-04',
+    category: 'ai',
+    excerpt: 'Najlepsze narzędzia AI które zwiększają produktywność programisty: Copilot, Cursor, Claude, ChatGPT, V0, Bolt',
+    content: 'Rok 2026 to eksplozja narzędzi AI dla developerów. GitHub Copilot X – cały twój workflow w edytorze. Cursor – IDE z AI-first designem. Claude 4 – najlepszy do refactoringu. V0 od Vercela – generuje UI z promptu. Bolt – fullstack AI.\n\nStatystyki: programiści z AI są 2x szybsi w prostych zadaniach. Ale w złożonych problemach AI wciąż wymaga człowieka w pętli.\n\nW X-DEV używamy AI do automatyzacji powtarzalnych zadań – testy, dokumentacja, proste komponenty.',
+    color: 'linear-gradient(135deg,#6c5ce7,#00cec9)',
+    icon: 'fas fa-robot'
+  },
+  {
+    title: 'Testy jednostkowe w React – praktyczny przewodnik',
+    date: '2026-05-04',
+    category: 'webdev',
+    excerpt: 'Jak testować komponenty React? Vitest, React Testing Library, mockowanie API i coverage na poziomie 80%.',
+    content: 'Testy jednostkowe to podstawa jakości kodu. W React: Vitest (szybki, compatible z Vite), React Testing Library (testuj jak user, nie implementację), MSW (mockuj API bez serwera).\n\nCo testować: logika komponentów, stany (loading, error, empty), interakcje użytkownika. Co omijać: style, detaily implementacji.\n\nCel: 80% coverage. W X-DEV każde PR musi przechodzić testy – CI to weryfikuje.',
+    color: 'linear-gradient(135deg,#45ba4b,#2d7d30)',
+    icon: 'fas fa-check-circle'
+  },
+  {
+    title: 'Cloudflare – kompletny stack dla Twojej strony',
+    date: '2026-05-02',
+    category: 'tech',
+    excerpt: 'Cloudflare to nie tylko CDN. Domena, DNS, DDoS, Workers, R2, Pages – wszystko w jednym ekosystemie.',
+    content: 'Cloudflare oferuje pełen stack: domena (registrar bez marży), DNS (najszybszy na świecie), CDN (330 miast), DDoS protection (absorpcyjne 200Tbps), Workers (edge computing), R2 (storage bez opłat za egress), Pages (hosting stron statycznych).\n\nKorzyści: jedna platforma, niższe koszty, lepsza wydajność, większe bezpieczeństwo.\n\nW X-DEV Cloudflare to domyślny wybór dla hostingu i bezpieczeństwa stron naszych klientów.',
+    color: 'linear-gradient(135deg,#f38020,#e06b10)',
+    icon: 'fas fa-cloud'
+  },
+  {
+    title: 'Szybki start z Three.js – grafika 3D w przeglądarce',
+    date: '2026-05-02',
+    category: 'webdev',
+    excerpt: 'Three.js pozwala tworzyć 3D w przeglądarce bez pluginów. Od prostych obiektów po zaawansowane sceny.',
+    content: 'Three.js to biblioteka WebGL która upraszcza tworzenie grafiki 3D. Zaczynasz od sceny, kamery i renderera. Potem dodajesz obiekty (BoxGeometry, SphereGeometry), światło (ambient, directional), tekstury i animacje.\n\nZastosowania: landing page z 3D, wizualizacje produktów, gry przeglądarkowe, dashboardy 3D.\n\nW X-DEV używamy Three.js do tworzenia interaktywnych sekcji na stronach klientów – efekt WOW bez ciężkich bibliotek.',
+    color: 'linear-gradient(135deg,#0494ec,#036bb0)',
+    icon: 'fas fa-cube'
+  },
+  {
+    title: 'Jak wybrać technologię do swojego projektu webowego?',
+    date: '2026-04-30',
+    category: 'webdev',
+    excerpt: 'Wybór stacku technologicznego to jedna z najważniejszych decyzji. Sprawdź, na co zwrócić uwagę przy wyborze frameworka i języka programowania.',
+    content: 'Wybór odpowiedniej technologii to fundament każdego projektu. Nie ma jednej uniwersalnej odpowiedzi – wszystko zależy od konkretnych wymagań, budżetu i celu biznesowego.\n\nPrzed podjęciem decyzji warto odpowiedzieć sobie na kilka pytań: Czy priorytetem jest szybkość działania? Łatwość utrzymania? Skalowalność? Dostępność programistów na rynku?\n\nReact sprawdzi się w rozbudowanych aplikacjach SPA, Vue.js w mniejszych projektach gdzie liczy się prostota, a Next.js tam, gdzie potrzebne jest SSR i dobre SEO. Po stronie backendu Node.js gwarantuje szybkość, Python dobre biblioteki do AI/ML, a Go wydajność.\n\nW X-DEV zawsze dobieramy technologie pod projekt, nigdy odwrotnie. Zapraszamy do kontaktu – pomożemy Ci wybrać optymalny stack!',
+    color: 'linear-gradient(135deg,#6c5ce7,#a29bfe)',
+    icon: 'fas fa-code'
+  },
+  {
+    title: 'Xbot AI – jak asystent może zwiększyć sprzedaż o 300%',
+    date: '2026-04-28',
+    category: 'ai',
+    excerpt: 'Case study wdrożenia Xbota w firmie e-commerce. Jak inteligentny czat AI obniżył koszty obsługi klienta i zwiększył konwersję.',
+    content: 'Firma z branży e-commerce borykała się z dużą liczbą zapytań od klientów. Dwóch konsultantów nie dawało rady obsłużyć wszystkich, a czas oczekiwania na odpowiedź sięgał nawet 24h.\n\nPo wdrożeniu Xbota sytuacja zmieniła się diametralnie. Asystent AI przeszkolony na bazie produktów, FAQ i polityki zwrotów zaczął obsługiwać 80% zapytań automatycznie, w ciągu kilku sekund.\n\nEfekty po 3 miesiącach:\n- Koszty obsługi klienta spadły o 60%\n- Współczynnik konwersji wzrósł o 300%\n- Satysfakcja klientów (CSAT) wzrosła z 3.8 do 4.7\n- Zespół obsługi mógł skupić się na trudniejszych sprawach\n\nXbot dziś obsługuje 4 języki i jest dostępny 24/7. To jeden z najbardziej opłacalnych wydatków IT w tej firmie.',
+    color: 'linear-gradient(135deg,#00cec9,#55efc4)',
+    icon: 'fas fa-robot'
+  },
+  {
+    title: 'Najlepsze praktyki SEO w 2026 roku',
+    date: '2026-04-26',
+    category: 'business',
+    excerpt: 'Google ciągle aktualizuje algorytmy. Poznaj najnowsze techniki optymalizacji stron pod kątem wyszukiwarek.',
+    content: 'SEO w 2026 roku to już nie tylko słowa kluczowe. Google coraz bardziej stawia na user experience, wydajność strony i autentyczną wartość merytoryczną.\n\nNajważniejsze praktyki:\n\n1. Core Web Vitals – LCP poniżej 2.5s, INP poniżej 200ms, CLS poniżej 0.1\n2. Content – długie, wyczerpujące artykuły (1500+ słów) zdobywają pozycje\n3. EEAT – doświadczenie, wiedza, autorytet i zaufanie to kluczowe sygnały\n4. Mobile-first – Google indeksuje wersję mobilną, musi być idealna\n5. Semantic SEO – struktura nagłówków, schema markup, breadcrumbs\n\nW X-DEV audyt SEO robimy już na etapie projektowania strony, a nie po jej wdrożeniu. To oszczędza czas i pieniądze.',
+    color: 'linear-gradient(135deg,#fd79a8,#e84393)',
+    icon: 'fas fa-search'
+  },
+  {
+    title: 'React vs Vue vs Angular – który framework wybrać?',
+    date: '2026-04-24',
+    category: 'tech',
+    excerpt: 'Porównanie trzech najpopularniejszych frameworków frontendowych. Zalety, wady i typowe zastosowania każdego z nich.',
+    content: 'Wybór frameworka frontendowego to często pierwsza wielka decyzja w projekcie. Każdy z trzech głównych graczy ma swoje mocne strony.\n\nReact – największa społeczność, ogromny ekosystem, elastyczność. Idealny do złożonych aplikacji i projektów, gdzie potrzebna jest pełna kontrola. Najwięcej ofert pracy.\n\nVue – łagodna krzywa uczenia, czytelna składnia, świetna dokumentacja. Dobry wybór dla mniejszych zespołów i projektów średniej wielkości.\n\nAngular – pełny framework ze wszystkim "w środku". Typowanie, DI, rxjs. Sprawdza się w dużych korporacyjnych systemach.\n\nNie ma zwycięzcy – jest dopasowanie do konkretnego projektu. W X-DEV pracujemy ze wszystkimi frameworkami.',
+    color: 'linear-gradient(135deg,#fdcb6e,#e17055)',
+    icon: 'fab fa-react'
+  },
+  {
+    title: 'Cyberbezpieczeństwo w aplikacjach webowych',
+    date: '2026-04-22',
+    category: 'tech',
+    excerpt: 'Najczęstsze podatności i jak się przed nimi chronić. OWASP Top 10, SSL, autoryzacja i bezpieczne przechowywanie danych.',
+    content: 'Cyberbezpieczeństwo to nie opcja – to konieczność. Według OWASP Top 10, najczęstsze zagrożenia to:\n\n1. Broken Access Control – błędy w autoryzacji\n2. Injection – SQLi, XSS, Command Injection\n3. Bad Configuration – domyślne hasła, otwarte porty\n\nJak się chronić:\n- Zawsze HTTPS (SSL/TLS)\n- Input validation po stronie serwera\n- Prepared statements dla baz danych\n- Content Security Policy (CSP)\n- Regularne audyty i skanowanie podatności\n- Aktualizacje bibliotek i frameworków\n\nW X-DEV bezpieczeństwo jest częścią naszego procesu developmentu, a nie dodatkiem.',
+    color: 'linear-gradient(135deg,#e17055,#d63031)',
+    icon: 'fas fa-shield-alt'
+  },
+  {
+    title: 'Jak przyspieszyć ładowanie strony? 10 sprawdzonych metod',
+    date: '2026-04-18',
+    category: 'webdev',
+    excerpt: 'Wolna strona traci klientów. Optymalizacja obrazów, lazy loading, cache, CDN i inne techniki przyspieszania WWW.',
+    content: 'Statystyki nie kłamią: 53% użytkowników opuszcza stronę, jeśli ładowanie trwa dłużej niż 3 sekundy. Oto 10 sprawdzonych metod na przyspieszenie:\n\n1. Kompresja obrazów – WebP, AVIF, lazy loading\n2. Minifikacja CSS/JS – usunięcie zbędnych znaków\n3. Cache przeglądarki – nagłówki Cache-Control\n4. CDN – Cloudflare, AWS CloudFront\n5. Hosting na szybkim serwerze – NVMe, dobra lokalizacja\n6. Ograniczenie requestów – połączenie plików\n7. Font-display: swap – czcionki nie blokują renderowania\n8. Preload kluczowych zasobów – <link rel=preload>\n9. Code splitting – ładowanie tylko potrzebnego kodu\n10. Server timing – optymalizacja zapytań do bazy',
+    color: 'linear-gradient(135deg,#0984e3,#74b9ff)',
+    icon: 'fas fa-tachometer-alt'
+  },
+  {
+    title: 'Progressive Web Apps – przyszłość aplikacji mobilnych',
+    date: '2026-04-16',
+    category: 'tech',
+    excerpt: 'PWA łączą zalety stron WWW i aplikacji natywnych. Offline, push notifications i instalacja na ekranie głównym.',
+    content: 'PWA to technologie, które pozwalają stronie www działać jak natywna aplikacja. Wystarczy kilka plików – manifest.json i service worker – aby użytkownik mógł zainstalować Twoją stronę na ekranie głównym.\n\nZalety PWA:\n- Działa offline dzięki cache service workera\n- Push notifications jak w natywnej aplikacji\n- Nie wymaga sklepu z aplikacjami\n- Znacznie mniejszy rozmiar niż aplikacja natywna\n- Jedna baza kodu dla wszystkich platform\n\nPrzykłady udanych PWA: Twitter Lite, Pinterest, Starbucks. Każda z tych firm odnotowała wzrost zażycia o 50-80% po wdrożeniu PWA.',
+    color: 'linear-gradient(135deg,#6c5ce7,#00cec9)',
+    icon: 'fas fa-mobile-alt'
+  },
+  {
+    title: 'Jak przygotować brief na stronę WWW?',
+    date: '2026-04-14',
+    category: 'business',
+    excerpt: 'Dobry brief to połowa sukcesu. Praktyczny przewodnik co powinien zawierać, aby dostać wycenę i stronę swoich marzeń.',
+    content: 'Brief to dokument, który określa czego oczekujesz od strony internetowej. Im bardziej szczegółowy, tym lepsza wycena i szybsza realizacja.\n\nCo powinien zawierać dobry brief:\n\n1. Cel strony – sprzedaż, informacja, rekrutacja, budowanie marki\n2. Grupa docelowa – wiek, lokalizacja, zachowania\n3. Wymagane funkcjonalności – formularze, czat, rezerwacje\n4. Przykładowe strony – co Ci się podoba i dlaczego\n5. Budżet i harmonogram – realne oczekiwania\n\nDobry brief oszczędza czas i pieniądze. W X-DEV pomagamy naszym klientom go przygotować – często wystarczy jedna rozmowa, żebyśmy wiedzieli czego potrzebujesz.',
+    color: 'linear-gradient(135deg,#00b894,#00cec9)',
+    icon: 'fas fa-file-alt'
+  },
+  {
+    title: 'Headless CMS – nowa era zarządzania treścią',
+    date: '2026-04-12',
+    category: 'webdev',
+    excerpt: 'Czym jest headless CMS i dlaczego coraz więcej firm przechodzi na to rozwiązanie? Strapi, Contentful, Sanity.',
+    content: 'Tradycyjne CMSy jak WordPress czy Joomla łączą backend z frontendem. Headless CMS oddziela warstwę zarządzania treścią od prezentacji.\n\nZalety:\n- Dowolny frontend – React, Vue, a nawet aplikacja mobilna\n- Lepsza wydajność – statyczny HTML z Next.js\n- Więcej kontroli nad bezpieczeństwem\n- Łatwiejsze skalowanie\n\nPopularne headless CMS: Strapi (open-source), Contentful (SaaS), Sanity (real-time), WordPress jako headless.\n\nW X-DEV coraz częściej polecamy headless CMS dla firm, które potrzebują elastyczności i wydajności.',
+    color: 'linear-gradient(135deg,#fdcb6e,#f39c12)',
+    icon: 'fas fa-database'
+  },
+  {
+    title: 'Automatyzacja deploymentu z GitHub Actions',
+    date: '2026-04-10',
+    category: 'tech',
+    excerpt: 'Krok po kroku: jak skonfigurować CI/CD dla projektu webowego za pomocą GitHub Actions i Docker.',
+    content: 'Manualny deployment to ryzyko błędu i strata czasu. GitHub Actions automatyzuje cały proces od pusha po produkcję.\n\nPodstawowy workflow:\n\n1. Push na branch main\n2. GitHub Actions uruchamia testy\n3. Buduje obraz Docker\n4. Pushuje do rejestru (GHCR, Docker Hub)\n5. Deploy na serwer przez SSH\n\nPrzykładowy plik .github/workflows/deploy.yml zajmuje około 40 linii i po konfiguracji działa bez obsługi. To standard w każdym projekcie X-DEV.',
+    color: 'linear-gradient(135deg,#2d3436,#636e72)',
+    icon: 'fab fa-github'
+  },
+  {
+    title: 'Dlaczego UX jest kluczowy dla Twojego biznesu?',
+    date: '2026-04-08',
+    category: 'business',
+    excerpt: 'Inwestycja w doświadczenie użytkownika zwraca się wielokrotnie. Statystyki, przykłady i koszty złego UX.',
+    content: 'User Experience to nie tylko ładny design. To całokształt doświadczeń użytkownika podczas interakcji z Twoją stroną lub aplikacją.\n\nStatystyki:\n- 88% użytkowników nie wraca po złym UX\n- Dobry UX może zwiększyć konwersję o 200-400%\n- Każda zł zainwestowana w UX zwraca się 100x\n\nZły UX kosztuje: użytkownicy nie znajdują informacji, koszyk jest skomplikowany, formularz za długi. W X-DEV projektujemy z myślą o użytkowniku od pierwszej iteracji.',
+    color: 'linear-gradient(135deg,#a29bfe,#6c5ce7)',
+    icon: 'fas fa-paint-brush'
+  },
+  {
+    title: 'Serverless – czy to się opłaca?',
+    date: '2026-04-06',
+    category: 'tech',
+    excerpt: 'AWS Lambda, Vercel, Cloudflare Workers. Czy serverless to faktycznie oszczędność? Analiza kosztów i wydajności.',
+    content: 'Serverless brzmi jak "bez serwera", ale w rzeczywistości chodzi o to, że nie musisz zarządzać infrastrukturą. Cloud provider robi to za Ciebie.\n\nZalety:\n- Skalowanie automatyczne do zera\n- Płacicie tylko za faktyczne użycie\n- Brak obowiązku administracji serwerem\n\nWady:\n- Cold start – pierwsze wywołanie po przerwie trwa dłużej\n- Vendor lock-in – ciężko przenieść się do innego providera\n- Koszty przy dużym ruchu mogą być wyższe niż VPS\n\nDla małych i średnich projektów serverless często się opłaca. Dla dużych, stabilnych obciążeń – lepszy może być tradycyjny VPS.',
+    color: 'linear-gradient(135deg,#fd79a8,#6c5ce7)',
+    icon: 'fas fa-cloud'
+  }
+];
+
+// Blog jest ręcznie redagowany – brak automatycznego generowania treści
+
+const perPage = 6;
+let currentPage = 1;
+let filtered = [...posts];
+
+function render() {
+  const grid = document.getElementById('blogGrid');
+  const search = document.getElementById('blogSearch').value.toLowerCase();
+  const cat = document.getElementById('blogCategory').value;
+
+  filtered = posts.filter(p => {
+    const matchSearch = p.title.toLowerCase().includes(search) || p.excerpt.toLowerCase().includes(search);
+    const matchCat = cat === 'all' || p.category === cat;
+    return matchSearch && matchCat;
+  });
+
+  const totalPages = Math.ceil(filtered.length / perPage);
+  if (currentPage > totalPages) currentPage = totalPages || 1;
+  const start = (currentPage - 1) * perPage;
+  const pagePosts = filtered.slice(start, start + perPage);
+
+  if (pagePosts.length === 0) {
+    const t = blogTranslations[blogLang];
+    grid.innerHTML = `<div class="blog-empty"><i class="fas fa-search"></i><p>${t['blog.empty']}</p></div>`;
+  } else {
+    grid.innerHTML = pagePosts.map((p, i) => `
+      <article class="blog-card reveal" data-delay="${(i % perPage) * 100}">
+        <div class="blog-card-img" style="background: ${p.color};">
+          <i class="${p.icon}"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">${catName(p.category)}</span>
+            <span>${formatDate(p.date)}</span>
+          </div>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt}</p>
+          <a href="#post-${posts.indexOf(p)}" class="btn btn-primary btn-sm read-more" data-index="${posts.indexOf(p)}">${blogTranslations[blogLang]['blog.read']} <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  const pag = document.getElementById('pagination');
+  if (totalPages <= 1) { pag.innerHTML = ''; return; }
+  pag.innerHTML = Array.from({length: totalPages}, (_, i) =>
+    `<button class="${i+1===currentPage?'active':''}" onclick="currentPage=${i+1};render()">${i+1}</button>`
+  ).join('');
+
+  setTimeout(observeReveal, 50);
+}
+
+function catName(c) {
+  const names = {
+    pl: { tech: 'Technologie', webdev: 'Web Development', ai: 'AI', business: 'Biznes' },
+    en: { tech: 'Technology', webdev: 'Web Development', ai: 'AI', business: 'Business' }
+  };
+  return (names[blogLang] || names.pl)[c] || c;
+}
+
+function formatDate(d) {
+  const months = ['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
+  const [y,m,day] = d.split('-');
+  return `${parseInt(day)} ${months[parseInt(m)-1]} ${y}`;
+}
+
+document.getElementById('blogSearch').addEventListener('input', () => { currentPage = 1; render(); });
+document.getElementById('blogCategory').addEventListener('change', () => { currentPage = 1; render(); });
+
+const modal = document.getElementById('postModal');
+const modalBody = document.getElementById('postModalBody');
+const modalClose = document.getElementById('modalClose');
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.read-more');
+  if (btn) {
+    e.preventDefault();
+    const idx = parseInt(btn.dataset.index);
+    const p = posts[idx];
+    openPost(idx);
+  }
+});
+
+function openPost(idx) {
+  const p = posts[idx];
+  if (!p) return;
+  modalBody.innerHTML = `
+    <h3>${p.title}</h3>
+    <div class="meta">
+      <span>${catName(p.category)}</span>
+      <span>${formatDate(p.date)}</span>
+    </div>
+    ${p.content.split('\n').filter(l => l.trim()).map(l => `<p>${l}</p>`).join('')}
+  `;
+  modal.classList.add('open');
+  history.pushState(null, '', '#post-' + idx);
+  // Article structured data
+  const existing = document.getElementById('blogArticleLD');
+  if (existing) existing.remove();
+  const ld = document.createElement('script');
+  ld.id = 'blogArticleLD';
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: p.title,
+    description: p.excerpt,
+    datePublished: p.date,
+    author: { '@type': 'Organization', name: 'X-DEV' },
+    publisher: { '@type': 'Organization', name: 'X-DEV / Dvbxtreme Sp. z o.o.' }
+  });
+  document.head.appendChild(ld);
+}
+
+function closePost() {
+  modal.classList.remove('open');
+  history.pushState(null, '', window.location.pathname);
+}
+
+modalClose.addEventListener('click', closePost);
+modal.addEventListener('click', (e) => { if (e.target === modal) closePost(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) closePost(); });
+window.addEventListener('popstate', () => {
+  const m = location.hash.match(/^#post-(\d+)$/);
+  if (m) openPost(parseInt(m[1]));
+  else modal.classList.remove('open');
+});
+
+(function() {
+  const m = location.hash.match(/^#post-(\d+)$/);
+  if (m) { const idx = parseInt(m[1]); if (posts[idx]) setTimeout(() => openPost(idx), 100); }
+})();
+
+document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.pageYOffset > 50));
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('open');
+});
+
+function observeReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => entry.target.classList.add('visible'), parseInt(delay));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+}
+
+render();
+
+// i18n
+const blogTranslations = {
+  pl: {
+    'blog.title': 'Blog X-DEV',
+    'blog.desc': 'Nowinki technologiczne, porady i case studies prosto od naszego zespolu.',
+    'blog.search': 'Szukaj w blogu...',
+    'blog.all': 'Wszystkie kategorie',
+    'blog.cat_tech': 'Technologie',
+    'blog.cat_webdev': 'Web Development',
+    'blog.cat_ai': 'AI',
+    'blog.cat_business': 'Biznes',
+    'blog.empty': 'Brak wynikow dla podanej frazy.',
+    'blog.read': 'Czytaj wiecej',
+    'nav.start': 'Start',
+    'nav.services': 'Uslugi',
+    'nav.portfolio': 'Portfolio',
+    'nav.about': 'O nas',
+    'nav.contact': 'Kontakt',
+    'footer.copy': 'X-DEV / Dvbxtreme Sp. z o.o. Wszelkie prawa zastrzezone.',
+    'footer.home': 'Strona glowna',
+    'footer.pp': 'Polityka prywatnosci',
+    'footer.tos': 'Regulamin',
+  },
+  en: {
+    'blog.title': 'X-DEV Blog',
+    'blog.desc': 'Tech news, tutorials and case studies straight from our team.',
+    'blog.search': 'Search blog...',
+    'blog.all': 'All categories',
+    'blog.cat_tech': 'Technology',
+    'blog.cat_webdev': 'Web Development',
+    'blog.cat_ai': 'AI',
+    'blog.cat_business': 'Business',
+    'blog.empty': 'No results for your search.',
+    'blog.read': 'Read more',
+    'nav.start': 'Home',
+    'nav.services': 'Services',
+    'nav.portfolio': 'Portfolio',
+    'nav.about': 'About',
+    'nav.contact': 'Contact',
+    'footer.copy': 'X-DEV / Dvbxtreme Sp. z o.o. All rights reserved.',
+    'footer.home': 'Homepage',
+    'footer.pp': 'Privacy policy',
+    'footer.tos': 'Terms of service',
+  }
+};
+
+let blogLang = localStorage.getItem('xdev_blog_lang') || 'pl';
+
+function applyBlogLang(lang) {
+  blogLang = lang;
+  localStorage.setItem('xdev_blog_lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  const t = blogTranslations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key]) el.textContent = t[key];
+  });
+  const search = document.getElementById('blogSearch');
+  if (search) search.placeholder = t['blog.search'];
+  render();
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyBlogLang(btn.dataset.lang));
+});
+
+applyBlogLang(blogLang);
+</script>
+</body>
+</html>

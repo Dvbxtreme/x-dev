@@ -1,0 +1,49 @@
+name: Deploy na Mikrus
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skonfiguruj Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Zainstaluj zależności
+        run: pip install paramiko
+
+      - name: Deploy przez SFTP
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          python -c "
+import paramiko, os
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect('${{ env.SSH_HOST }}', port=int('${{ env.SSH_PORT }}'), username='${{ env.SSH_USER }}', password='${{ env.SSH_PASSWORD }}')
+sftp = ssh.open_sftp()
+web = '/var/www/html'
+files = ['index.html','style.css','script.js','manifest.json','sw.js','blog.html','kariera.html','404.html','favicon.ico','robots.txt','sitemap.xml','polityka-prywatnosci.html','regulamin.html']
+for f in files:
+    if os.path.exists(f):
+        sftp.put(f, f'{web}/{f}')
+        print(f'OK: {f}')
+for d in ['icons','portfolio']:
+    try: sftp.mkdir(f'{web}/{d}')
+    except: pass
+    for f in os.listdir(d):
+        sftp.put(os.path.join(d,f), f'{web}/{d}/{f}')
+sftp.close()
+ssh.exec_command('nginx -s reload')
+ssh.close()
+print('Deploy OK!')
+"
