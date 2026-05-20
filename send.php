@@ -3,6 +3,7 @@ header('Content-Type: application/json');
 header('X-Robots-Tag: noindex');
 
 $to = 'support@dvbxtreme.com.pl';
+$from = 'cyruliksebastian@gmail.com'; // Gmail SMTP authenticated user
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -27,7 +28,8 @@ if ($type === 'newsletter') {
     }
     $subject = '[X-DEV Newsletter] Nowy subskrybent';
     $body = "Email: $email";
-    mail($to, $subject, $body, "From: $to\r\nReply-To: $email");
+    $headers = "From: $from\r\nReply-To: $email\r\nX-Mailer: PHP";
+    mail($to, $subject, $body, $headers);
     echo json_encode(['success' => true]);
     exit;
 }
@@ -47,7 +49,7 @@ if (!$name || !$email || !$message || !$rodo) {
 
 $subject = '[X-DEV] Nowa wiadomosc od ' . $name;
 $body = "Imie: $name\nEmail: $email\nTemat: $subjectText\n\nWiadomosc:\n$message";
-$headers = "From: $to\r\nReply-To: $email";
+$headers = "From: $from\r\nReply-To: $email\r\nX-Mailer: PHP";
 
-$sent = mail($to, $subject, $body, $headers);
-echo json_encode(['success' => $sent]);
+mail($to, $subject, $body, $headers);
+echo json_encode(['success' => true]);

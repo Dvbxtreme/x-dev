@@ -32,7 +32,7 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect('${{ env.SSH_HOST }}', port=int('${{ env.SSH_PORT }}'), username='${{ env.SSH_USER }}', password='${{ env.SSH_PASSWORD }}')
 sftp = ssh.open_sftp()
 web = '/var/www/html'
-files = ['index.html','style.css','script.js','manifest.json','sw.js','blog.html','kariera.html','404.html','favicon.ico','robots.txt','sitemap.xml','polityka-prywatnosci.html','regulamin.html']
+files = ['index.html','style.css','script.js','manifest.json','sw.js','blog.html','kariera.html','404.html','favicon.ico','robots.txt','sitemap.xml','polityka-prywatnosci.html','regulamin.html','send.php']
 for f in files:
     if os.path.exists(f):
         sftp.put(f, f'{web}/{f}')
