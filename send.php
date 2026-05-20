@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 header('X-Robots-Tag: noindex');
 
-$to = 'support@dvbxtreme.com.pl';
+$to = 'cyruliksebastian@gmail.com';
 $from = 'cyruliksebastian@gmail.com'; // Gmail SMTP authenticated user
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
