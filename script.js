@@ -622,11 +622,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
       const btn = contactForm.querySelector('button[type="submit"]');
       const sendingText = getTranslation(currentLang, 'form.sending');
       btn.innerHTML = `${sendingText} <i class="fas fa-spinner fa-spin"></i>`;
       btn.disabled = true;
+      try {
+        const fd = new FormData(contactForm);
+        const res = await fetch('send.php', { method: 'POST', body: fd });
+        const data = await res.json();
+        if (data.success) {
+          btn.innerHTML = getTranslation(currentLang, 'form.sent');
+          contactForm.reset();
+        } else {
+          btn.innerHTML = getTranslation(currentLang, 'form.error');
+        }
+      } catch {
+        btn.innerHTML = getTranslation(currentLang, 'form.error');
+      }
+      setTimeout(() => {
+        btn.innerHTML = `${getTranslation(currentLang, 'form.btn')} <i class="fas fa-paper-plane"></i>`;
+        btn.disabled = false;
+      }, 3000);
     });
   }
 
@@ -1160,10 +1178,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const newsletterForm = document.getElementById('newsletterForm');
   if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
+    newsletterForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
       const btn = newsletterForm.querySelector('button');
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
       btn.disabled = true;
+      try {
+        const fd = new FormData(newsletterForm);
+        const res = await fetch('send.php', { method: 'POST', body: fd });
+        const data = await res.json();
+        btn.innerHTML = data.success ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>';
+      } catch {
+        btn.innerHTML = '<i class="fas fa-times"></i>';
+      }
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        btn.disabled = false;
+      }, 3000);
     });
   }
 
